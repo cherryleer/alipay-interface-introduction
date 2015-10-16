@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Alipay Interface Introduction</title>
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+                <section>
+                    <h2>支付宝钱包</h2>
+                    <h3>支付流程</h3>
+                    <br>
+                    <br>
+                    <p>
+                        <small>Created by <a href="http://cherryleer.com">Cherryleer</a> / <a href="http://www.atman.com">@Atman</a></small>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Contents</h2>
+                    <ul>
+                        <li>文档说明</li>
+                        <li>接口调用方式</li>
+                        <li>请求参数说明</li>
+                        <li>同步通知参数说明</li>
+                        <li>异步通知参数说明</li>
+                    </ul>
+                </section>
+
+				<section>
+					<h3>功能说明</h3>
+					<p>
+                        支付宝钱包支付接口开发包2.0标准版主要用来向第三方应用程序提供便捷、安全 以及可靠的支付服务。本文主要描述开发包支付接口的使用方法,供合作伙伴的开 发者接入使用。
+                    </p>
+				</section>
+
+                <section>
+                    <h3>钱包支付开发包业务流程</h3>
+                    <img src="images/功能演示.png">
+                </section>
+
+                <section>
+                    <h3>商户客户端与支付宝钱包开发包交互模式</h3>
+                    <img src="images/数据交互.png">
+                </section>
+
+                <section>
+                    <h3>请求参数含义</h3>
+                    <p>
+                        请求参数是商户在与支付宝进行数据交互时,提供给支付宝的请求数据,以便支付 宝根据这些数据进一步处理。
+                    </p>
+                </section>
+
+                <section>
+                    <h3>基本参数</h3>
+                    <img src="images/基本参数1.png">
+                </section>
+
+                <section>
+                    <h3>基本参数</h3>
+                    <img src="images/基本参数2.png">
+                </section>
+
+                <section>
+                    <h3>业务参数</h3>
+                    <img src="images/业务参数1.png">
+                </section>
+
+                <section>
+                    <h3>业务参数</h3>
+                    <img src="images/业务参数2.png">
+                </section>
+
+                <section>
+                    <h3>样例</h3>
+                    <img src="images/样例.png">
+                </section>
+
+                <section>
+                    <h3>同步参数说明</h3>
+                    <ul>
+                        <li>含义</li>
+                        <li>参数列表</li>
+                        <li>样例</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>同步参数含义</h3>
+                    <p>
+                        支付宝对商户的请求数据处理完成后,会将处理的结果数据直接通知给商户。这些 处理结果数据就是同步通知参数。
+                    </p>
+                </section>
+
+                <section>
+                    <h3>同步通知参数列表</h3>
+                    <img src="images/同步通知参数.png">
+                </section>
+
+                <section>
+                    <h3>样例</h3>
+                    <img src="images/样例2.png">
+                </section>
+
+				<section>
+					<h1>The End</h1>
+                    <p>
+                        <small>Created by <a href="http://cherryleer.com">Cherryleer</a> / <a href="http://www.atman.com">@Atman</a></small>
+                    </p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
