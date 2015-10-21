@@ -56,6 +56,7 @@
                         <li>请求参数说明</li>
                         <li>同步通知参数说明</li>
                         <li>异步通知参数说明</li>
+                        <li>如何验证是否支付宝请求</li>
                     </ul>
                 </section>
 
@@ -196,6 +197,39 @@
                 <section>
                     <h3>样例</h3>
                     <img src="images/样例3.png">
+                </section>
+
+                <section>
+                    <h3>如何验证是否支付宝请求</h3>
+                    <ul>
+                        <li>目的</li>
+                        <li>工作原理</li>
+                        <li>样例</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>目的</h3>
+                    <p>
+                        验证此次通知信息是否是支付宝服务器发来的信息，以帮助校验反馈回来的数据的真假性。
+                    </p>
+                </section>
+
+                <section>
+                    <h3>工作原理</h3>
+                    <ul>
+                        <li>获取支付宝返回数据之一的通知校验ID(notify_id)</li>
+                        <li>按照支付宝要求的格式拼接成要请求的链接</li>
+                        <li>通过访问这个请求链接，获取结果</li>
+                        <li>如果获得的信息是true，则校验成功；如果获得的信息是其他，则校验失败。</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>样例</h3>
+                    <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+                        https://mapi.alipay.com/gateway.do?service=notify_verify&partner=2088002396712354&notify_id=RqPnCoPT3K9%252Fvwbh3I%252BFioE227%252BPfNMl8jwyZqMIiXQWxhOCmQ5MQO%252FWd93rvCB%252BaiGg
+                    </code></pre>
                 </section>
 
 				<section>
